@@ -1,38 +1,43 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Display 4 items per row */
+  gap: 20px; /* Adjust the space between items */
+}
+
+.news-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
   text-align: center;
+  position:relative;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image-container {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.news-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.news-description {
+  margin-top: 10px; /* Space between image and description */
+  font-size: 14px;
+  color: #333;
+}
+li{
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container {
+  position: relative; /* Required for absolute children */
 }
